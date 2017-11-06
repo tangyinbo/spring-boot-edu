@@ -1,0 +1,3 @@
+server:
+  port: 18081
+  context-path: /sbe-web
