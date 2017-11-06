@@ -1,3 +1,17 @@
+#--profile config---------------------------
+spring:
+  profiles:
+    active: dev
+#--server config---------------------------
 server:
   port: 18081
   context-path: /sbe-web
+logging:
+  config: classpath:logback.xml
+#--mybatis config---------------------------
+mybatis:
+  configLocation: classpath:mybatis/mybatis-config.xml
+  mapperLocations: classpath*:mybatis/mapper
+
+
+
