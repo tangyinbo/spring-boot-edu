@@ -15,3 +15,24 @@ c3p0:
   acquireRetryDelay: 1000
   breakAfterAcquireFailure: false
   testConnectionOnCheckout: false
+#--rdisconfig---------------------------
+########################################################
+###REDIS (RedisProperties) redis基本配置；
+########################################################
+# database name
+spring:
+  redis:
+    database: 0
+    pool:
+      max-idle: 8
+      min-idle: 5
+      max-active: 800
+      max-wait: -1
+    password:
+# name of Redis server  哨兵监听的Redis server的名称
+    sentinel:
+      master: mymaster
+ # comma-separated list of host:port pairs  哨兵的配置列表
+      nodes: 192.168.42.189:26379
+
+
