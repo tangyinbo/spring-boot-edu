@@ -6,6 +6,7 @@ import com.cowboy.sbe.dao.entity.User;
 import com.cowboy.sbe.dao.mapper.UserMapper;
 import com.cowboy.sbe.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,5 +24,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> getUsers(User user) {
         return userMapper.getUsers();
+    }
+
+
+    public UserMapper getUserMapper() {
+        return userMapper;
+    }
+
+    public void setUserMapper(UserMapper userMapper) {
+        this.userMapper = userMapper;
     }
 }
