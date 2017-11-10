@@ -17,6 +17,7 @@ import java.util.Enumeration;
 
 /**
  * 前端请求安全拦截器
+ *
  * @author Tangynbo
  * @version 1.0
  * @create 2017-11-08 10:25
@@ -29,20 +30,22 @@ public class SecurityFilter extends OncePerRequestFilter {
         String method = httpServletRequest.getMethod();
 
         Enumeration<String> headNames = httpServletRequest.getHeaderNames();
-        while(headNames.hasMoreElements()){
+        while (headNames.hasMoreElements()) {
             String headName = headNames.nextElement();
-            log.info("headName:"+headName+"  value:"+ httpServletRequest.getHeader(headName));
+            log.info("headName:" + headName + "  value:" + httpServletRequest.getHeader(headName));
         }
 
         InputStream ins = httpServletRequest.getInputStream();
         int len = httpServletRequest.getContentLength();
-        if(len>0){
+        if (len > 0) {
             byte[] bytes = new byte[len];
-            ins.read(bytes,0,len);
-            log.info("============>"+new String(bytes,"utf-8"));
+            ins.read(bytes, 0, len);
+            log.info("============>" + new String(bytes, "utf-8"));
         }
 
-        filterChain.doFilter(httpServletRequest,httpServletResponse);
+        log.info("----------------------filter:SecurityFilter");
+        filterChain.doFilter(httpServletRequest, httpServletResponse);
+        log.info("----------------------filter:SecurityFilter............................");
 
     }
 }

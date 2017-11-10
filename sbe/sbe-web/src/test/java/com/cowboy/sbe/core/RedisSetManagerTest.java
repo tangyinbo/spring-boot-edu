@@ -6,6 +6,9 @@ import com.cowboy.sbe.SbeWebApplicaitonTest;
 import com.cowboy.sbe.core.redis.RedisSetManager;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Date;
 
