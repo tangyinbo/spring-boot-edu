@@ -14,14 +14,14 @@ import java.util.zip.ZipFile;
  * @create 2017-11-10 16:09
  **/
 public class TT {
-   /* public static void main(String[] args) throws IOException {
-        File f = new File("C:\\Users\\Administrator\\Desktop\\staticpage\\page1.zip");
+    public static void main(String[] args) throws IOException {
+        File f = new File("C:\\Users\\Administrator\\Desktop\\dowload.zip");
         ZipFile zfile = new ZipFile(f);
 
-        System.out.println(zfile.getName());
+/*        System.out.println(zfile.getName());
         System.out.println(zfile.getEntry("page2"));
         System.out.println(File.separator);
-        System.out.println(zfile.getEntry("page1"+File.separator+"index.html"));
+        System.out.println(zfile.getEntry("page1"+File.separator+"index.html"));*/
 
 
         System.out.println("==============");
@@ -37,5 +37,5 @@ public class TT {
         }
 
 
-    }*/
+    }
 }
